@@ -1,0 +1,17 @@
+<html>
+<body>
+<table>
+    {% for row in table %}
+        <tr>
+            {% for value in row %}
+                {% for k,v in urls.items %}
+                    {% if k == value %}
+                        <td><a href={{v}}>{{k}}</a></td>
+                    {%endif%}
+                {%endfor%}
+            {% endfor %}
+        </tr>
+    {%endfor%}
+</table>
+</body>
+</html>
