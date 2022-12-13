@@ -9,7 +9,8 @@ text1 = form.getfirst("TEXT_1", "не задано")
 text1 = html.escape(text1)
 
 
-data = pd.read_csv(r'C:\Users\AndreyPC\PycharmProjects\Python_practic\Part5__form__with__parce\cgi-bin\data.tsv', sep='\t', header=None, encoding='UTF-8')
+data = pd.read_csv(r'C:\Users\AndreyPC\PycharmProjects\Python_practic\Part5__form__with__parce\cgi-bin\data.tsv',
+                   sep='\t', header=None, encoding='UTF-8')
 data = data.apply(lambda x: x.str.strip(), axis=0)
 data.index = data[0]
 data = data.drop(columns=[0,1,3,4,5,6,7])
